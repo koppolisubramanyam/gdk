@@ -1,0 +1,92 @@
+Q1. Simple Linear Regression vs. Multiple Linear Regression:
+
+Simple Linear Regression:
+Simple linear regression involves modeling the relationship between two variables: one independent variable (X) and one dependent variable (Y). The relationship is assumed to be approximately linear, represented by a straight line equation (Y = mx + b). The goal is to find the best-fit line that minimizes the sum of squared differences between the observed and predicted values.
+Example: Predicting a student's test score (Y) based on the number of hours studied (X). Here, the number of hours studied (X) is the independent variable, and the test score (Y) is the dependent variable.
+
+Multiple Linear Regression:
+Multiple linear regression, on the other hand, involves modeling the relationship between one dependent variable (Y) and two or more independent variables (X1, X2, X3, ...). It extends the concept of simple linear regression to multiple dimensions, where each independent variable contributes to the overall prediction. The equation for multiple linear regression is: Y = b0 + b1X1 + b2X2 + ... + bn*Xn.
+Example: Predicting a house's price (Y) based on various features such as square footage (X1), number of bedrooms (X2), number of bathrooms (X3), and location desirability (X4).
+
+Q2. Assumptions of Linear Regression and Checking for Their Validity:
+
+Assumptions of Linear Regression:
+
+Linearity: The relationship between the independent and dependent variables is linear.
+Independence: The observations are independent of each other.
+Homoscedasticity: The variance of the residuals is constant across all levels of the independent variables.
+Normality: The residuals are normally distributed.
+No Multicollinearity: The independent variables are not highly correlated with each other.
+Checking Assumptions:
+To check whether these assumptions hold in a given dataset, you can perform the following checks:
+
+Linearity: Plot the scatter plot between the independent and dependent variables and check for linearity.
+Independence: Ensure that the data points are collected independently, and there are no dependencies or autocorrelations.
+Homoscedasticity: Plot the residuals against the predicted values and look for any patterns or trends.
+Normality: Create a histogram or a Q-Q plot of the residuals and check if they follow a normal distribution.
+No Multicollinearity: Calculate the correlation matrix between the independent variables and check for high correlation coefficients.
+Q3. Interpretation of Slope and Intercept in Linear Regression:
+
+In a simple linear regression model (Y = mx + b):
+
+Slope (m): Represents the change in the dependent variable (Y) for a one-unit change in the independent variable (X). It indicates the rate of change in Y concerning X.
+Intercept (b): Represents the value of the dependent variable (Y) when the independent variable (X) is zero. It is the value of Y when X is not contributing to the prediction.
+Example:
+Let's say we have a simple linear regression model for predicting the number of sales (Y) based on advertising expenses (X). The equation is Sales (Y) = 10 * Advertising Expenses (X) + 50.
+
+Interpretation:
+
+Slope (m = 10): For every additional dollar spent on advertising (X), the number of sales (Y) is expected to increase by 10 units.
+Intercept (b = 50): If there were no advertising expenses (X = 0), the model predicts that there would still be 50 sales (Y).
+Q4. Concept of Gradient Descent and Its Use in Machine Learning:
+
+Gradient Descent:
+Gradient descent is an optimization algorithm used to minimize the cost function in machine learning models, particularly in regression and neural networks. It works by iteratively updating the model's parameters to find the values that result in the lowest cost (error) between predicted and actual values.
+
+The basic idea is to calculate the gradient (slope) of the cost function concerning each model parameter and then take steps in the opposite direction of the gradient to reach the minimum cost.
+
+Use in Machine Learning:
+In machine learning, gradient descent is primarily used to train models. During the training process, the algorithm adjusts the model's parameters by descending along the gradient to find the optimal values that yield the best predictions.
+
+There are two main variants of gradient descent:
+
+Batch Gradient Descent: It computes the gradient of the cost function using the entire training dataset in each iteration.
+Stochastic Gradient Descent (SGD): It computes the gradient using only one training sample at a time, making it computationally more efficient but introducing more randomness in the optimization process.
+Q5. Multiple Linear Regression Model:
+
+Multiple linear regression extends the concept of simple linear regression to include multiple independent variables. The model assumes a linear relationship between the dependent variable (Y) and multiple independent variables (X1, X2, X3, ..., Xn). The equation for multiple linear regression is:
+
+Y = b0 + b1X1 + b2X2 + ... + bn*Xn + ε
+
+where:
+
+Y is the dependent variable (the one to be predicted).
+b0 is the intercept (the value of Y when all X's are zero).
+b1, b2, ..., bn are the coefficients (slopes) representing the impact of each independent variable on Y.
+X1, X2, ..., Xn are the independent variables.
+ε represents the error term, capturing the variability not explained by the model.
+Q6. Multicollinearity in Multiple Linear Regression:
+
+Multicollinearity is a phenomenon in multiple linear regression where two or more independent variables are highly correlated with each other. This high correlation between predictors can cause issues in the regression model, making it difficult to distinguish the individual effects of each predictor on the dependent variable.
+
+Consequences of Multicollinearity:
+
+The coefficients of the correlated variables become unstable and can fluctuate dramatically with small changes in the dataset.
+It becomes challenging to interpret the significance of individual predictor variables.
+The standard errors of the coefficients increase, reducing the reliability of the model's predictions.
+Detecting and Addressing Multicollinearity:
+To detect multicollinearity, you can calculate the correlation matrix between all the independent variables. A correlation matrix close to 1 or -1 indicates high multicollinearity.
+
+To address multicollinearity, you can consider the following options:
+
+Remove one or more correlated variables from the model, keeping the most relevant ones.
+Combine the correlated variables into a single variable if they represent similar information.
+Perform dimensionality reduction techniques like Principal Component Analysis (PCA) to transform the correlated variables into uncorrelated components.
+Q7. Polynomial Regression Model vs. Linear Regression:
+
+Polynomial Regression Model:
+Polynomial regression is a form of regression analysis that models the relationship between the dependent variable (Y) and the independent variable (X) by fitting a polynomial equation to the data. Instead of a straight line, the model uses higher-degree polynomial equations (e.g., quadratic, cubic) to capture non-linear relationships. The equation for a polynomial regression of degree n is:
+Y = b0 + b1X + b2X^2 + b3X^3 + ... + bnX^n + ε
+
+Linear Regression:
+Linear regression, as discussed earlier, models the relationship between Y and
